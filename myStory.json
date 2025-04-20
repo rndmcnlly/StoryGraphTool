@@ -1,58 +1,169 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Lost in My Dreams",
+    "Credits": "Created by Neila Miranda (nmirand1@ucsc.edu).",
+    "InitialLocation": "Attic",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Attic": {
+            "Body": "You wake up in a dusty attic on top of an old sleeping bag thats been worn out.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Look around",
+                    "Target": "Looks"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+
+        "Looks": {
+            "Body": "After looking around, you see a cat sleeping at the end of the sleeping bag. \nYou're surounded by drown boxes, but there's a small opening just big enough for you to squeeze through.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Pet the cat",
+                    "Target": "Pet"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Squeeze by the boxes",
+                    "Target": "Door"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+
+        "Pet": {
+            "Body": "As you pet the kitty, you see that it has a name tag; 'Oz'. \nIt wakes up and moves through the boxes to the other side. You noticed that the cat was on top of a plastic key.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Pick up key",
+                    "Target": "Pick Key"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Squeeze by the boxes",
+                    "Target": "Door"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+
+        "Pick Key": {
+            "Body": "You pick up the key",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Squeeze by the boxes",
+                    "Target": "Door"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+
+        "Pick Lock": {
+            "Body": "You pick up the lock",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Door"
+                }
+            ]
+        },
+
+        "Door":{
+            "Body": "There's an attic door on the floor - it seems to be missing something. There's also a small window at the end of the attic.",
+            "Choices": [
+                {
+                    "Text":"Try door",
+                    "Target": "Try"
+                },
+                {
+                    "Text": "Window",
+                    "Target": "Window"
+                },
+                {
+                    "Text": "Bed",
+                    "Target": "Looks"
+                }
+            ]
+        },
+
+        "Try":{
+            "Body": "You try to open the door."
+        },
+
+        "Puzzle":{
+            "Body": "The door opens and the attic stairs fall open.",
+            "Choices": [
+                {
+                    "Text": "Climb down",
+                    "Target": "Hall"
+                }
+
+            ]
+
+        },
+
+        "Window":{
+            "Body": "At the window, you see a small toy lock",
+            "Choices":[
+                {
+                    "Text": "Pick up lock",
+                    "Target": "Pick Lock"
+                },
+                {
+                    "Text": "Go back",
+                    "Target": "Door"
+                }
+            ]
+
+        },
+
+        "Hall":{
+            "Body": "Going down, you see a hallway with two doors. One has a broken window and you can see the front yard. The other looks to have a broken lock.",
+            "Choices":[
+                {
+                    "Text": "Broken door",
+                    "Target":"Broken"
+                },
+                {
+                    "Text": "Front door",
+                    "Target":"Front"
+                }
+            ]
+        },
+
+        "Broken":{
+            "Body": "Entering the bedroom with the broken door, you smell burnt cookies",
+            "Choices":[
+                {
+                    "Text": "Go fowad",
+                    "Target":"Bad end"
+                },
+                {
+                    "Text": "Go back",
+                    "Target":"Hall"
+                }
+            ]
+        },
+
+        "Front":{
+            "Body": "Going through the front door, you hear a small meow. Looking down, you see the cat following you. Then you hear an alarm",
+            "Choices":[
+                {
+                    "Text": "Turn off alarm",
+                    "Target":"Good end"
+                }
+            ]
+        },
+
+        "Bad end":{
+            "Body": "As you step inside, the door locks from the outside and how you're trapped in this small bedroom.",
+            "Choices": [
+                {
+                    "Text": "wake up",
+                    "Target": "Bad day"
+                }
+            ]
+        },
+
+        "Bad day":{
+            "Body": "You wake up from a bad dream and how you have no energy to start the day. :("
+        },
+
+        "Good end":{
+            "Body": "You turn off our alarm and see that you woke up on time for class today! Full of energy and ignoring such a weird dream, you're ready to start your day. :D"
         }
     }
 }
